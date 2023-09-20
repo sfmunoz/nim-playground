@@ -9,8 +9,10 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
 - [git_config.nim](https://github.com/sfmunoz/nimex/blob/main/git_config.nim): **osproc → execCmdEx()** used to run **git config** commands
 - [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
 
-## Generics
+## Generics / Templates / Macros
 
+- [generics.nim](https://github.com/sfmunoz/nimex/blob/main/generics.nim): generics related example
+  - https://nim-lang.org/docs/manual.html#generics
 - [templates.nim](https://github.com/sfmunoz/nimex/blob/main/templates.nim): templates related example
   - https://nim-lang.org/docs/manual.html#templates
   - [Nimrod: A new approach to meta programming" by Andreas Rumpf (2013)](https://www.youtube.com/watch?v=TPPVfgJvdNo)
