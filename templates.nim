@@ -13,6 +13,11 @@
 #     Nimrod: A new approach to meta programming" by Andreas Rumpf (2013)
 #
 
+# {{{ imports
+
+import std/envvars
+
+# }}}
 # ======== templates ========
 # {{{ int12()
 
@@ -63,6 +68,10 @@ template html(name: untyped, matter: typed) =
   proc name(): string =
     res = "<html>\n"
     matter
+    if getEnv("TPL_DEBUG","0") == "1":
+      echo "==== html() ===="
+      echo astToStr(matter)
+      echo "---- html() ----"
     res.add("</html>")
     result = res
 
@@ -71,19 +80,22 @@ template html(name: untyped, matter: typed) =
 
 template nestedTag(tag: untyped) =
   template tag(matter: typed) =
-    # FIXME: cannot use 'result' here as in https://youtu.be/TPPVfgJvdNo?t=659
-    res.add("<" & astToStr(tag) & ">\n")
+    let tag_str = astToStr(tag)
+    res.add("<" & tag_str & ">\n")
     matter
-    res.add("</" & astToStr(tag) & ">\n")
+    if getEnv("TPL_DEBUG","0") == "1":
+      echo "==== nestedTag(",tag_str,") ===="
+      echo astToStr(matter)
+      echo "---- nestedTag(",tag_str,") ----"
+    res.add("</" & tag_str & ">\n")
 
 # }}}
 # {{{ simpleTag()
 
 template simpleTag(tag: untyped) =
   template tag(matter: untyped) =
-    # FIXME: cannot use 'result' here as in https://youtu.be/TPPVfgJvdNo?t=659
-    let ts = astToStr(tag)
-    res.add("<" & ts & ">" & matter & "</" & ts & ">\n")
+    let tag_str = astToStr(tag)
+    res.add("<" & tag_str & ">" & matter & "</" & tag_str & ">\n")
 
 # }}}
 # ======== procs ========
