@@ -20,3 +20,5 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - [Nimrod: A new approach to meta programming" by Andreas Rumpf (2013)](https://www.youtube.com/watch?v=TPPVfgJvdNo)
 - [macros.nim](https://github.com/sfmunoz/nimex/blob/main/macros.nim): macros related example
   - https://nim-lang.org/docs/manual.html#macros
+  - https://nim-lang.org/docs/tut3.html
+  - https://nim-by-example.github.io/macros/
