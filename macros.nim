@@ -35,14 +35,20 @@ proc html_st(n: NimNode, depth: Natural): string =
   #echo "===="
   #echo n.treeRepr
   #echo n.repr," | ",n.kind
+  #echo spaces(depth),n.kind
   #echo "----"
   result = ""
-  if n.kind == nnkIdent:
-    result.add spaces(depth) & "<" & n.repr & ">\n"
+  let cc = n.kind == nnkCall or n.kind == nnkCommand
+  let lit = cc and n.len > 1 and n[1].kind == nnkStrLit
+  if cc:
+    assert n[0].kind == nnkIdent
+    let extra = if lit: n[1].strVal else: "\n"
+    result.add spaces(depth) & "<" & n[0].repr & ">" & extra
   for n2 in n.children:
     result.add html_st(n2,depth+1)
-  if n.kind == nnkIdent:
-    result.add spaces(depth) & "</" & n.repr & ">\n"
+  if cc:
+    let extra = if lit: "" else: spaces(depth)
+    result.add extra & "</" & n[0].repr & ">\n"
 
 # }}}
 # {{{ html() -- macro
@@ -81,27 +87,29 @@ macro html(head, body: untyped): untyped =
   #                 Ident "li"
   #                 StrLit "another item"
 
-  let buf = "<html>\n" & html_st(body,1) & "</html>"
+  let res = "<html>\n" & html_st(body,1) & "</html>"
 
   # dumptree:
-  #   var buf: string = "...html..."
+  #   let buf: string = "...html..."
   # ---------------------------------
   # StmtList
-  #   VarSection
+  #   LetSection
   #     IdentDefs
   #       Ident "buf"
   #       Ident "string"
   #       StrLit "...html..."
 
+  # Option 1:
   #result = nnkStmtList.newTree()
-  #result.add newNimNode(nnkVarSection).add(
+  #result.add newNimNode(nnkLetSection).add(
   #  newIdentDefs(ident(head.repr), ident("string"), newLit(buf))
   #)
 
+  # Option 2:
   result = quote do:
-    let `head.repr` = `buf`
+    let `head.repr` = `res`
 
-  #echo result.treeRepr
+  echo result.treeRepr
 
 # }}}
 # {{{ main() -- proc
