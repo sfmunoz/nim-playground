@@ -7,9 +7,10 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - https://nim-lang.org/docs/manual.html#procedures-type-bound-operators
 - [ffi.nim](https://github.com/sfmunoz/nimex/blob/main/ffi.nim): foreign function interface example
 - [git_config.nim](https://github.com/sfmunoz/nimex/blob/main/git_config.nim): **osproc → execCmdEx()** used to run **git config** commands
-- [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
 - [obj_var.nim](https://github.com/sfmunoz/nimex/blob/main/obj_var.nim): object variants example
   - https://nim-lang.org/docs/tut2.html#object-oriented-programming-object-variants
+- [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
+- [ref_ptr.nim](https://github.com/sfmunoz/nimex/blob/main/ref_ptr.nim): references (ref) and pointers (ptr) example
 
 ## Generics / Templates / Macros
 
