@@ -2,6 +2,8 @@
 
 This repository holds [Nim](https://nim-lang.org/) snippets created while I'm learning the language
 
+## Core
+
 - [destroy.nim](https://github.com/sfmunoz/nimex/blob/main/destroy.nim): destructors behaviour (lifetime-tracking hooks)
   - https://nim-lang.org/docs/destructors.html
   - https://nim-lang.org/docs/manual.html#procedures-type-bound-operators
@@ -11,6 +13,9 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - https://nim-lang.org/docs/tut2.html#object-oriented-programming-object-variants
 - [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
 - [ref_ptr.nim](https://github.com/sfmunoz/nimex/blob/main/ref_ptr.nim): references (ref) and pointers (ptr) example
+- [threads.nim](https://github.com/sfmunoz/nimex/blob/main/threads.nim): thread example
+  - https://nim-by-example.github.io/parallelism/
+  - https://nim-by-example.github.io/channels/
 
 ## Generics / Templates / Macros
 
