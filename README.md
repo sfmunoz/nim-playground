@@ -13,9 +13,13 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - https://nim-lang.org/docs/tut2.html#object-oriented-programming-object-variants
 - [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
 - [ref_ptr.nim](https://github.com/sfmunoz/nimex/blob/main/ref_ptr.nim): references (ref) and pointers (ptr) example
-- [threads.nim](https://github.com/sfmunoz/nimex/blob/main/threads.nim): thread example
+- [threads.nim](https://github.com/sfmunoz/nimex/blob/main/threads.nim): thread example (low-level)
   - https://nim-by-example.github.io/parallelism/
   - https://nim-by-example.github.io/channels/
+- [threads_p.nim](https://github.com/sfmunoz/nimex/blob/main/threads_p.nim): thread example (threadpool)
+  - https://nim-by-example.github.io/parallelism/
+  - https://nim-by-example.github.io/channels/
+
 
 ## Generics / Templates / Macros
 
