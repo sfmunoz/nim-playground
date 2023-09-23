@@ -13,6 +13,9 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - https://nim-lang.org/docs/tut2.html#object-oriented-programming-object-variants
 - [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
 - [ref_ptr.nim](https://github.com/sfmunoz/nimex/blob/main/ref_ptr.nim): references (ref) and pointers (ptr) example
+
+## Threading / parallelism / concurrency
+
 - [threads_ll.nim](https://github.com/sfmunoz/nimex/blob/main/threads_ll.nim): thread example (low-level)
   - https://nim-by-example.github.io/parallelism/
   - https://nim-by-example.github.io/channels/
@@ -20,6 +23,25 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - https://nim-by-example.github.io/parallelism/
   - https://nim-by-example.github.io/channels/
 
+```
+$ diff -U0 threads_ll.nim threads_p.nim
+(...)
+@@ -17 +17 @@
+-import std/os
++import threadpool, std/os
+@@ -24,2 +23,0 @@
+-  t1: Thread[(int,int)]
+-  t2: Thread[void]
+@@ -59,5 +57,3 @@
+-  createThread(t1,m1,(20,200))
+-  createThread(t2,m2)
+-  #joinThreads(t1,t2)  # cannot be used: different types
+-  joinThreads(t1)
+-  joinThreads(t2)
++  spawn m1((20,120))
++  spawn m2()
++  sync()
+```
 
 ## Generics / Templates / Macros
 
