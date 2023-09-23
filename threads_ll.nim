@@ -5,7 +5,7 @@
 # Date: Sat Sep 23 07:22:43 AM UTC 2023
 #
 # Compile/run:
-#   $ nim c -r threads.nim
+#   $ nim c -r threads_ll.nim
 #
 # Refs:
 #   - https://nim-by-example.github.io/parallelism/
