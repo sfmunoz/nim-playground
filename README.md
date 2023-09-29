@@ -7,14 +7,6 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
 - [destroy.nim](https://github.com/sfmunoz/nimex/blob/main/destroy.nim): destructors behaviour (lifetime-tracking hooks)
   - https://nim-lang.org/docs/destructors.html
   - https://nim-lang.org/docs/manual.html#procedures-type-bound-operators
-- [dict.nim](https://github.com/sfmunoz/nimex/blob/main/dict.nim): dictionaries (tables)
-  - https://nim-lang.org/docs/tables.html
-    ```
-    var t = {1: "one", 2: "two"}.toTable    # Table
-    var t = {1: "one", 2: "two"}.newTable   # TableRef
-    var t = initTable[string,int]()         # Table
-    var t = newTable[string,int]()          # TableRef
-    ```
 - [except_effect.nim](https://github.com/sfmunoz/nimex/blob/main/except_effect.nim): exceptions and effects
   - https://nim-lang.org/docs/tut2.html#exceptions
   - https://nim-lang.org/docs/manual.html#exception-handling
@@ -26,6 +18,25 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - https://nim-lang.org/docs/tut2.html#object-oriented-programming-object-variants
 - [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
 - [ref_ptr.nim](https://github.com/sfmunoz/nimex/blob/main/ref_ptr.nim): references (ref) and pointers (ptr) example
+
+## Collections
+
+- [array_seq.nim](https://github.com/sfmunoz/nimex/blob/main/array_seq.nim): arrays and sequences
+  - https://nim-lang.org/docs/manual.html#types-array-and-sequence-types
+    ```
+    let a = [1,2,3,4,5,6]     # array[0..5,int]
+    var a: array[0..5,int]    # array[0..5,int] → [0,0,0,0,0,0]
+    let s = newSeq[int]()     # seq[int]        → @[]
+    var s1 = @[1,2,3,4,5,6]   # seq[int]
+    ```
+- [dict.nim](https://github.com/sfmunoz/nimex/blob/main/dict.nim): dictionaries (tables)
+  - https://nim-lang.org/docs/tables.html
+    ```
+    var t = {1: "one", 2: "two"}.toTable    # Table
+    var t = {1: "one", 2: "two"}.newTable   # TableRef
+    var t = initTable[string,int]()         # Table
+    var t = newTable[string,int]()          # TableRef
+    ```
 
 ## Threading / parallelism / concurrency
 
