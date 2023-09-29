@@ -7,6 +7,14 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
 - [destroy.nim](https://github.com/sfmunoz/nimex/blob/main/destroy.nim): destructors behaviour (lifetime-tracking hooks)
   - https://nim-lang.org/docs/destructors.html
   - https://nim-lang.org/docs/manual.html#procedures-type-bound-operators
+- [dict.nim](https://github.com/sfmunoz/nimex/blob/main/dict.nim): dictionaries (tables)
+  - https://nim-lang.org/docs/tables.html
+    ```
+    var t = {1: "one", 2: "two"}.toTable    # Table
+    var t = {1: "one", 2: "two"}.newTable   # TableRef
+    var t = initTable[string,int]()         # Table
+    var t = newTable[string,int]()          # TableRef
+    ```
 - [except_effect.nim](https://github.com/sfmunoz/nimex/blob/main/except_effect.nim): exceptions and effects
   - https://nim-lang.org/docs/tut2.html#exceptions
   - https://nim-lang.org/docs/manual.html#exception-handling
