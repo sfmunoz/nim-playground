@@ -7,6 +7,11 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
 - [destroy.nim](https://github.com/sfmunoz/nimex/blob/main/destroy.nim): destructors behaviour (lifetime-tracking hooks)
   - https://nim-lang.org/docs/destructors.html
   - https://nim-lang.org/docs/manual.html#procedures-type-bound-operators
+- [except_effect.nim](https://github.com/sfmunoz/nimex/blob/main/except_effect.nim): exceptions and effects
+  - https://nim-lang.org/docs/tut2.html#exceptions
+  - https://nim-lang.org/docs/manual.html#exception-handling
+  - https://nim-lang.org/docs/manual.html#effect-system
+  - [<nim-2.0.0>/lib/system/exceptions.nim](https://github.com/nim-lang/Nim/blob/devel/lib/system/exceptions.nim)
 - [ffi.nim](https://github.com/sfmunoz/nimex/blob/main/ffi.nim): foreign function interface example
 - [git_config.nim](https://github.com/sfmunoz/nimex/blob/main/git_config.nim): **osproc → execCmdEx()** used to run **git config** commands
 - [obj_var.nim](https://github.com/sfmunoz/nimex/blob/main/obj_var.nim): object variants example
