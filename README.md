@@ -48,6 +48,9 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
     let s4: HashSet[string]
     let s5: OrderedSet[string]
     ```
+- [sugar_lambda.nim](https://github.com/sfmunoz/nimex/blob/main/sugar_lambda.nim): lambda, map, filter, folding
+  - https://nim-lang.org/docs/sugar.html
+  - **https://nim-lang.org/docs/sequtils.html**
 
 ## Threading / parallelism / concurrency
 
