@@ -52,6 +52,18 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
   - https://nim-lang.org/docs/sugar.html
   - **https://nim-lang.org/docs/sequtils.html**
 
+## Generics / Templates / Macros
+
+- [generics.nim](https://github.com/sfmunoz/nimex/blob/main/generics.nim): generics related example
+  - https://nim-lang.org/docs/manual.html#generics
+- [templates.nim](https://github.com/sfmunoz/nimex/blob/main/templates.nim): templates related example
+  - https://nim-lang.org/docs/manual.html#templates
+  - [Nimrod: A new approach to meta programming" by Andreas Rumpf (2013)](https://www.youtube.com/watch?v=TPPVfgJvdNo)
+- [macros.nim](https://github.com/sfmunoz/nimex/blob/main/macros.nim): macros related example
+  - https://nim-lang.org/docs/manual.html#macros
+  - https://nim-lang.org/docs/tut3.html
+  - https://nim-by-example.github.io/macros/
+
 ## Threading / parallelism / concurrency
 
 - [threads_ll.nim](https://github.com/sfmunoz/nimex/blob/main/threads_ll.nim): thread example (low-level)
@@ -80,15 +92,3 @@ $ diff -U0 threads_ll.nim threads_p.nim
 +  spawn m2()
 +  sync()
 ```
-
-## Generics / Templates / Macros
-
-- [generics.nim](https://github.com/sfmunoz/nimex/blob/main/generics.nim): generics related example
-  - https://nim-lang.org/docs/manual.html#generics
-- [templates.nim](https://github.com/sfmunoz/nimex/blob/main/templates.nim): templates related example
-  - https://nim-lang.org/docs/manual.html#templates
-  - [Nimrod: A new approach to meta programming" by Andreas Rumpf (2013)](https://www.youtube.com/watch?v=TPPVfgJvdNo)
-- [macros.nim](https://github.com/sfmunoz/nimex/blob/main/macros.nim): macros related example
-  - https://nim-lang.org/docs/manual.html#macros
-  - https://nim-lang.org/docs/tut3.html
-  - https://nim-by-example.github.io/macros/
