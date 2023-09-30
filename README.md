@@ -37,6 +37,17 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
     var t = initTable[string,int]()         # Table
     var t = newTable[string,int]()          # TableRef
     ```
+- [hash_sets.nim](https://github.com/sfmunoz/nimex/blob/main/hash_sets.nim): hash-sets / ordered-hash-sets
+  - https://nim-lang.org/docs/sets.html: any value that can be hashed, without duplicate entries
+  - https://nim-lang.org/docs/manual.html#types-set-type: int8-int16 / uint8/byte-uint16 / char / enum / ordinal subrange types, i.e. range[-10..10]
+    ```
+    let a1 = [4,2,8]
+    let s1 = toHashSet([9,5,1])
+    let s2 = a1.toHashSet
+    let s3 = toOrderedSet(["five","six","seven","eight"])
+    let s4: HashSet[string]
+    let s5: OrderedSet[string]
+    ```
 
 ## Threading / parallelism / concurrency
 
