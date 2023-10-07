@@ -92,3 +92,12 @@ $ diff -U0 threads_ll.nim threads_p.nim
 +  spawn m2()
 +  sync()
 ```
+
+## TODO
+
+- http client
+- http server
+- command line parser
+- system.nim
+- logger
+- [Type erasure](https://en.wikipedia.org/wiki/Type_erasure) with Nim → [cgarciae/erasure.nim](https://gist.github.com/cgarciae/9b7f5d456e8aed3181f8b30f13de2f01)
