@@ -19,6 +19,12 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
 - [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
 - [ref_ptr.nim](https://github.com/sfmunoz/nimex/blob/main/ref_ptr.nim): references (ref) and pointers (ptr) example
 
+## HTTP
+
+- [httpd_mummy.nim](https://github.com/sfmunoz/nimex/blob/main/httpd_mummy/src/httpd_mummy.nim): HTTP server based
+  - [Mummy](https://github.com/guzba/mummy): a multi-threaded HTTP 1.1 and WebSocket server written entirely in Nim
+  - [httpd_mummy.nimble](https://github.com/sfmunoz/nimex/blob/main/httpd_mummy/httpd_mummy.nimble)
+
 ## Collections
 
 - [array_seq.nim](https://github.com/sfmunoz/nimex/blob/main/array_seq.nim): arrays and sequences
