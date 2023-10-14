@@ -12,7 +12,7 @@
 #   $ nimble run
 #
 # Client:
-#   $ curl http://127.0.0.1:8080
+#   $ curl -v http://127.0.0.1:8080
 #
 # Ref:
 #   https://github.com/guzba/mummy
@@ -24,12 +24,23 @@ import mummy, mummy/routers
 
 # }}}
 # ======== procs ========
+# {{{ HttpVersion.`$`() -- proc
+
+proc `$`(self: HttpVersion): string =
+  case self:
+    of Http10:
+      result = "HTTP/1.0"
+    of Http11:
+      result = "HTTP/1.1"
+
+# }}}
 # {{{ indexHandler() -- proc
 
-proc indexHandler(request: Request) =
-  var headers: HttpHeaders
-  headers["Content-Type"] = "text/plain"
-  request.respond(200, headers, "Hello, World!\n")
+proc indexHandler(req: Request) =
+  echo req.httpMethod, " ", req.uri, " ", req.httpVersion
+  var h: HttpHeaders
+  h["Content-Type"] = "text/plain"
+  req.respond(200, h, "Hello, World!\n")
 
 # }}}
 # {{{ main() -- proc
