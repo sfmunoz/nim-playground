@@ -4,30 +4,30 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
 
 ## Core
 
-- [destroy.nim](https://github.com/sfmunoz/nimex/blob/main/destroy.nim): destructors behaviour (lifetime-tracking hooks)
+- [destroy.nim](destroy.nim): destructors behaviour (lifetime-tracking hooks)
   - https://nim-lang.org/docs/destructors.html
   - https://nim-lang.org/docs/manual.html#procedures-type-bound-operators
-- [except_effect.nim](https://github.com/sfmunoz/nimex/blob/main/except_effect.nim): exceptions and effects
+- [except_effect.nim](except_effect.nim): exceptions and effects
   - https://nim-lang.org/docs/tut2.html#exceptions
   - https://nim-lang.org/docs/manual.html#exception-handling
   - https://nim-lang.org/docs/manual.html#effect-system
   - [<nim-2.0.0>/lib/system/exceptions.nim](https://github.com/nim-lang/Nim/blob/devel/lib/system/exceptions.nim)
-- [ffi.nim](https://github.com/sfmunoz/nimex/blob/main/ffi.nim): foreign function interface example
-- [git_config.nim](https://github.com/sfmunoz/nimex/blob/main/git_config.nim): **osproc → execCmdEx()** used to run **git config** commands
-- [obj_var.nim](https://github.com/sfmunoz/nimex/blob/main/obj_var.nim): object variants example
+- [ffi.nim](ffi.nim): foreign function interface example
+- [git_config.nim](git_config.nim): **osproc → execCmdEx()** used to run **git config** commands
+- [obj_var.nim](obj_var.nim): object variants example
   - https://nim-lang.org/docs/tut2.html#object-oriented-programming-object-variants
-- [popen.nim](https://github.com/sfmunoz/nimex/blob/main/popen.nim): popen() like example
-- [ref_ptr.nim](https://github.com/sfmunoz/nimex/blob/main/ref_ptr.nim): references (ref) and pointers (ptr) example
+- [popen.nim](popen.nim): popen() like example
+- [ref_ptr.nim](ref_ptr.nim): references (ref) and pointers (ptr) example
 
 ## HTTP
 
-- [httpd_mummy.nim](https://github.com/sfmunoz/nimex/blob/main/httpd_mummy/src/httpd_mummy.nim): HTTP server based
+- [httpd_mummy.nim](httpd_mummy/src/httpd_mummy.nim): HTTP server based
   - [Mummy](https://github.com/guzba/mummy): a multi-threaded HTTP 1.1 and WebSocket server written entirely in Nim
-  - [httpd_mummy.nimble](https://github.com/sfmunoz/nimex/blob/main/httpd_mummy/httpd_mummy.nimble)
+  - [httpd_mummy.nimble](httpd_mummy/httpd_mummy.nimble)
 
 ## Collections
 
-- [array_seq.nim](https://github.com/sfmunoz/nimex/blob/main/array_seq.nim): arrays and sequences
+- [array_seq.nim](array_seq.nim): arrays and sequences
   - https://nim-lang.org/docs/manual.html#types-array-and-sequence-types
     ```
     let a = [1,2,3,4,5,6]     # array[0..5,int]
@@ -35,7 +35,7 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
     let s = newSeq[int]()     # seq[int]        → @[]
     var s1 = @[1,2,3,4,5,6]   # seq[int]
     ```
-- [dict.nim](https://github.com/sfmunoz/nimex/blob/main/dict.nim): dictionaries (tables)
+- [dict.nim](dict.nim): dictionaries (tables)
   - https://nim-lang.org/docs/tables.html
     ```
     var t = {1: "one", 2: "two"}.toTable    # Table
@@ -43,7 +43,7 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
     var t = initTable[string,int]()         # Table
     var t = newTable[string,int]()          # TableRef
     ```
-- [hash_sets.nim](https://github.com/sfmunoz/nimex/blob/main/hash_sets.nim): hash-sets / ordered-hash-sets
+- [hash_sets.nim](hash_sets.nim): hash-sets / ordered-hash-sets
   - https://nim-lang.org/docs/sets.html: any value that can be hashed, without duplicate entries
   - https://nim-lang.org/docs/manual.html#types-set-type: int8-int16 / uint8/byte-uint16 / char / enum / ordinal subrange types, i.e. range[-10..10]
     ```
@@ -54,28 +54,28 @@ This repository holds [Nim](https://nim-lang.org/) snippets created while I'm le
     let s4: HashSet[string]
     let s5: OrderedSet[string]
     ```
-- [sugar_lambda.nim](https://github.com/sfmunoz/nimex/blob/main/sugar_lambda.nim): lambda, map, filter, folding
+- [sugar_lambda.nim](sugar_lambda.nim): lambda, map, filter, folding
   - https://nim-lang.org/docs/sugar.html
   - **https://nim-lang.org/docs/sequtils.html**
 
 ## Generics / Templates / Macros
 
-- [generics.nim](https://github.com/sfmunoz/nimex/blob/main/generics.nim): generics related example
+- [generics.nim](generics.nim): generics related example
   - https://nim-lang.org/docs/manual.html#generics
-- [templates.nim](https://github.com/sfmunoz/nimex/blob/main/templates.nim): templates related example
+- [templates.nim](templates.nim): templates related example
   - https://nim-lang.org/docs/manual.html#templates
   - [Nimrod: A new approach to meta programming" by Andreas Rumpf (2013)](https://www.youtube.com/watch?v=TPPVfgJvdNo)
-- [macros.nim](https://github.com/sfmunoz/nimex/blob/main/macros.nim): macros related example
+- [macros.nim](macros.nim): macros related example
   - https://nim-lang.org/docs/manual.html#macros
   - https://nim-lang.org/docs/tut3.html
   - https://nim-by-example.github.io/macros/
 
 ## Threading / parallelism / concurrency
 
-- [threads_ll.nim](https://github.com/sfmunoz/nimex/blob/main/threads_ll.nim): thread example (low-level)
+- [threads_ll.nim](threads_ll.nim): thread example (low-level)
   - https://nim-by-example.github.io/parallelism/
   - https://nim-by-example.github.io/channels/
-- [threads_p.nim](https://github.com/sfmunoz/nimex/blob/main/threads_p.nim): thread example (threadpool)
+- [threads_p.nim](threads_p.nim): thread example (threadpool)
   - https://nim-by-example.github.io/parallelism/
   - https://nim-by-example.github.io/channels/
 
