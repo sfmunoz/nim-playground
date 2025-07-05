@@ -2,7 +2,12 @@
 
 This repository holds [Nim](https://nim-lang.org/) snippets created while I'm learning the language
 
+> [!NOTE]
+> Nim version used: 2.2.4
+
 - [TL;DR](#tldr)
+- [References](#references)
+- [Nim install](#nim-install)
 - [Core](#core)
 - [HTTP](#http)
 - [Collections](#collections)
@@ -22,6 +27,42 @@ $ nim c -r destroy.nim
 $ nim c -r except_effect.nim
 
 (...)
+```
+
+## References
+
+- [https://nim-lang.org/](https://nim-lang.org/)
+- [https://github.com/nim-lang/Nim](https://github.com/nim-lang/Nim)
+
+## Nim install
+
+From https://nim-lang.org/install_unix.html (I'm using **Linux Mint 22.1**):
+
+```
+$ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+choosenim-init: Downloading choosenim-0.8.12_linux_amd64
+  Installed component 'nim'
+  Installed component 'nimble'
+  Installed component 'nimgrep'
+  Installed component 'nimpretty'
+  Installed component 'nimsuggest'
+  Installed component 'testament'
+  Installed component 'nim-gdb'
+   Switched to Nim 2.2.4
+choosenim-init: ChooseNim installed in /home/sfm/.nimble/bin
+choosenim-init: You must now ensure that the Nimble bin dir is in your PATH.
+choosenim-init: Place the following line in the ~/.profile or ~/.bashrc file.
+choosenim-init:     export PATH=/home/sfm/.nimble/bin:$PATH
+```
+
+Once the **PATH** includes **${HOME}/.nimble/bin**:
+```
+$ choosenim versions --installed
+   Channel: stable
+
+ Installed:  
+          * 2.2.4 (latest)
+            2.0.0
 ```
 
 ## Core
