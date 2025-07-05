@@ -2,6 +2,13 @@
 
 This repository holds [Nim](https://nim-lang.org/) snippets created while I'm learning the language
 
+- [Core](#core)
+- [HTTP](#http)
+- [Collections](#collections)
+- [Generics / Templates / Macros](generics-templates-macros)
+- [Threading / parallelism / concurrency](threading-parallelism-concurrency)
+- [TODO](#todo)
+
 ## Core
 
 - [destroy.nim](destroy.nim): destructors behaviour (lifetime-tracking hooks)
