@@ -1,4 +1,4 @@
-# NimEx: Nim 2.0 Examples
+# Nim Playground
 
 This repository holds [Nim](https://nim-lang.org/) snippets created while I'm learning the language
 
