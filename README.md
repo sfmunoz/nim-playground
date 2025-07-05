@@ -2,12 +2,27 @@
 
 This repository holds [Nim](https://nim-lang.org/) snippets created while I'm learning the language
 
+- [TL;DR](#tldr)
 - [Core](#core)
 - [HTTP](#http)
 - [Collections](#collections)
 - [Generics / Templates / Macros](generics-templates-macros)
 - [Threading / parallelism / concurrency](threading-parallelism-concurrency)
 - [TODO](#todo)
+
+## TL;DR
+
+```
+$ git clone https://github.com/sfmunoz/nim-playground.git
+
+$ cd nim-playground
+
+$ nim c -r destroy.nim
+
+$ nim c -r except_effect.nim
+
+(...)
+```
 
 ## Core
 
