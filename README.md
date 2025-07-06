@@ -1,4 +1,4 @@
-# Nim Playground
+# Nim playground
 
 This repository holds [Nim](https://nim-lang.org/) snippets created while I'm learning the language
 
